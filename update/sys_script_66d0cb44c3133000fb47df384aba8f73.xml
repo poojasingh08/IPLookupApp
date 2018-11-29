@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access/>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sys_properties</collection>
+        <condition>current.name=="com.snc.integration.jira.pull_data" || current.name=="com.snc.integration.jira.pull_interval" || current.name=="com.snc.integration.jira.pull_padding"</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>JiraIntegration - PullSettings</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[var j = new JiraIntegration();   
+j.debug("Pull Settings Business Rule on : "+current.name + " -- with value: " + current.value);
+var pullDataName = "com.snc.integration.jira.pull_data";
+var pullIntervalName = "com.snc.integration.jira.pull_interval";
+var pullPaddingName = "com.snc.integration.jira.pull_padding";
+
+
+var scheduleScript = "/*   *** DO NOT EDIT --- ALL CHANGES WILL EVENTUALLY BE LOST *** */\n";
+scheduleScript += 'if( gs.getProperty("com.snc.integration.jira.enable_integration")=="true"){\n';
+scheduleScript += '  var j = new JiraIntegration();\n';
+scheduleScript += '  j.checkJiraForIssueUpdates(';
+scheduleScript += (parseInt(gs.getProperty(pullIntervalName,2))+parseInt(gs.getProperty(pullPaddingName,1))) + ');\n}';
+
+if( current.name == pullDataName ){
+   if( current.value == "true" ){
+      //enabling data pulling
+      setupSchedule(true);
+   } else {
+      disableSchedule();
+   }
+} else {
+   if( current.name == pullIntervalName ){
+	  j.debug("Data changed for the PULL INTERVAL");
+      setupSchedule(false);
+      changePullInterval();
+   }
+   if( current.name == pullPaddingName ){
+      setupSchedule(false);
+      changePullPadding();
+   }
+}
+
+
+function setupSchedule(enableSchedule){
+   var schedName = "Jira Integration - Get Updates";
+   var sched = getScheduleQueryObject(schedName);
+   var exists = true;
+   if(!sched.next()){
+	  j.debug("No schedule exists...creating one");
+	  sched = new GlideRecord("sysauto_script");
+      sched.initialize();
+	  j.debug("Going to set the schedule name to: " + schedName);
+      sched.name = schedName;
+	  j.debug("Setting the Run Type");
+      sched.run_type = "periodically";
+	  j.debug("setting exists to false");
+      exists = false;
+   }
+   j.debug("Enable the schedule? " + enableSchedule);
+   if(enableSchedule){
+	  j.debug("We will activate this schedule as well.");
+      sched.active = 1;
+   }
+   sched.script = scheduleScript;
+   sched.run_period.setDateNumericValue(getDurationObject(gs.getProperty(pullIntervalName,"2")));
+   j.debug("Scheduled Job exists? "+exists);
+   if(exists){
+      sched.update();
+   } else {
+      sched.insert();
+   }
+}
+
+function disableSchedule(){
+   var sched = getScheduleQueryObject();
+   if(sched.next()){
+	  sched.active = 0;
+	  sched.update();
+   }
+}
+
+function changePullInterval(){
+   var sched = getScheduleQueryObject();
+   if(sched.next()){
+	  sched.run_period = getDurationObject(gs.getProperty(pullIntervalName,"2"));
+	  sched.update();
+   }
+}
+
+function changePullPadding(){
+   var sched = getScheduleQueryObject();
+   if(sched.next()){
+	  sched.script = scheduleScript;
+	  sched.update();
+   }   
+}
+
+function getScheduleQueryObject(schedName){
+//   var schedName = "Jira Integration - Get Updates";
+   var sched = new GlideRecord("sysauto_script");
+   sched.addQuery("name", schedName);
+   sched.query();
+   return sched;
+}
+function getDurationObject(minutes){
+   var d = new GlideDateTime();
+   d.setNumericValue(0);
+   d.addSeconds(minutes*60);
+   return d.getNumericValue();
+}]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2013-01-28 16:00:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>66d0cb44c3133000fb47df384aba8f73</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>JiraIntegration - PullSettings</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IPLookup" source="x_17301_iplookup">db5e46f5db022300c6315608689619bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPLookup">db5e46f5db022300c6315608689619bb</sys_scope>
+        <sys_update_name>sys_script_66d0cb44c3133000fb47df384aba8f73</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2013-01-31 03:31:37</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=66d0cb44c3133000fb47df384aba8f73"/>
+</record_update>

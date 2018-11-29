@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Jira" max_length="40" name="u_jira" type="collection">
+        <element attributes="import_attribute_name=u_comment,edge_encryption_enabled=true" label="Comment" max_length="1000" name="u_comment" type="string"/>
+        <element attributes="import_attribute_name=u_issue_number,edge_encryption_enabled=true" label="Issue Number" max_length="40" name="u_issue_number" type="string"/>
+        <element attributes="import_attribute_name=u_issue_type" label="Issue Type" max_length="40" name="u_issue_type" type="string"/>
+        <element attributes="import_attribute_name=u_status,edge_encryption_enabled=true" label="Status" max_length="40" name="u_status" type="string"/>
+        <element attributes="import_attribute_name=u_summary,edge_encryption_enabled=true" label="Summary" max_length="100" name="u_summary" type="string"/>
+    </element>
+</database>

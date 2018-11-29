@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Integration - Jira (POC)">558b3c66c3073000fb47df384aba8fc4</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image>images/icons/properties.gif</image>
+        <link_type>DIRECT</link_type>
+        <map_page/>
+        <mobile_title/>
+        <mobile_view_name/>
+        <name/>
+        <order>1010</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>system_properties_ui.do?sysparm_title=Jira%20Integration%20Settings&amp;sysparm_category=Jira%20Integration,Jira%20Integration%20Pull%20Settings</query>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2013-01-23 14:27:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>91abf066c3073000fb47df384aba8f21</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Settings</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IPLookup" source="x_17301_iplookup">db5e46f5db022300c6315608689619bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPLookup">db5e46f5db022300c6315608689619bb</sys_scope>
+        <sys_update_name>sys_app_module_91abf066c3073000fb47df384aba8f21</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2013-01-28 15:57:06</sys_updated_on>
+        <timeline_page/>
+        <title>Settings</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

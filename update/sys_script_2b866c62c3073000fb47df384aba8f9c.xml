@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access/>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>incident</collection>
+        <condition>current.category.getDisplayValue()=="Jira Issue"  &amp;&amp; gs.getSession().isInteractive() &amp;&amp; gs.getProperty("com.snc.integration.jira.enable_integration")=="true"</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>JiraIntegration - CreateIssue</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[var j = new JiraIntegration();
+
+j.debug("New Incident of Category 'Jira Issue'...create a Jira Issue");
+
+
+
+var issue = new Object();
+issue.fields = new Object();
+issue.fields.project = new Object();
+issue.fields.project.key = gs.getProperty("com.snc.integration.jira.project");
+issue.fields.summary = ""+current.short_description;
+//issue.fields.description = ""+current.comments;
+issue.fields.issuetype = new Object();
+issue.fields.issuetype.name=""+current.subcategory;
+issue.fields['customfield_'+j.sysidField] = j.getSysIdPrefix()+":"+current.sys_id;
+issue.fields.priority = new Object();
+issue.fields.priority.id = j.getJiraPriority(""+current.priority);
+
+if(j.verbose == "true"){
+   JSUtil.logObject(issue);
+}
+
+j.debug("Jira fields set.  Ready to create issue in Jira");
+var jiraIssue = j.createIssue(issue);
+j.debug("Jira issue created: " + jiraIssue.self);
+
+current.correlation_id = jiraIssue.key;
+current.correlation_display = j.CORRELATION_DISPLAY;
+
+var wn = "A corresponding JIRA Issue has been created:\n";
+wn += "ID: "+jiraIssue.id+"\n";
+wn += "Issue Number: "+jiraIssue.key+"\n";
+wn += "Issue URL: "+gs.getProperty('com.snc.integration.jira.base_jira_instance_url')+"/browse/"+jiraIssue.key+"\n";
+current.work_notes = wn;
+current.update();
+
+j.addExistingComments(current.sys_id, current.correlation_id);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2013-01-23 13:07:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2b866c62c3073000fb47df384aba8f9c</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>JiraIntegration - CreateIssue</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IPLookup" source="x_17301_iplookup">db5e46f5db022300c6315608689619bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPLookup">db5e46f5db022300c6315608689619bb</sys_scope>
+        <sys_update_name>sys_script_2b866c62c3073000fb47df384aba8f9c</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2013-01-31 06:06:46</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=2b866c62c3073000fb47df384aba8f9c"/>
+</record_update>

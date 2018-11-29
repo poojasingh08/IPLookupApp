@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Jira Comment Sync" max_length="40" name="u_jira_comment_sync" type="collection">
+        <element attributes="import_attribute_name=u_comment" label="Comment" max_length="1000" name="u_comment" type="string"/>
+        <element attributes="import_attribute_name=u_comment_id,edge_encryption_enabled=true" label="Comment ID" max_length="40" name="u_comment_id" type="string"/>
+        <element attributes="import_attribute_name=u_issue_id,edge_encryption_enabled=true" label="Issue ID" max_length="40" name="u_issue_id" type="string"/>
+        <element attributes="import_attribute_name=u_synced,edge_encryption_enabled=true" label="Synced" max_length="40" name="u_synced" type="string"/>
+    </element>
+</database>

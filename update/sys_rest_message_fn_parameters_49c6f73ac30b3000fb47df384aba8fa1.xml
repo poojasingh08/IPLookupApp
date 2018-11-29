@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>body</name>
+        <rest_message_function display_value="post">7514b33ac30b3000fb47df384aba8f51</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2013-01-24 22:43:28</sys_created_on>
+        <sys_id>49c6f73ac30b3000fb47df384aba8fa1</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>body</sys_name>
+        <sys_package display_value="IPLookup" source="x_17301_iplookup">db5e46f5db022300c6315608689619bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPLookup">db5e46f5db022300c6315608689619bb</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_49c6f73ac30b3000fb47df384aba8fa1</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2013-02-15 17:06:47</sys_updated_on>
+        <type>xml</type>
+        <value>{"transition" : {"id":"5"}}</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

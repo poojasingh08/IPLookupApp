@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Jira Integration">bd069212c3073000fb47df384aba8f52</category>
+        <order>500</order>
+        <property display_value="com.snc.integration.jira.project" name="com.snc.integration.jira.project">768864a2c3073000fb47df384aba8f51</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2013-01-23 13:04:23</sys_created_on>
+        <sys_id>73a864a2c3073000fb47df384aba8fb8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>com.snc.integration.jira.project.Jira Integration</sys_name>
+        <sys_package display_value="IPLookup" source="x_17301_iplookup">db5e46f5db022300c6315608689619bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPLookup">db5e46f5db022300c6315608689619bb</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_73a864a2c3073000fb47df384aba8fb8</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2013-01-28 15:45:54</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>

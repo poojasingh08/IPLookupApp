@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type/>
+        <basic_auth_password>3fyZ387pn2Q=</basic_auth_password>
+        <basic_auth_profile/>
+        <basic_auth_user>demoUser</basic_auth_user>
+        <content>${issuebody}</content>
+        <function_name>post</function_name>
+        <http_method/>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Jira Issue [ post ]</qualified_name>
+        <rest_endpoint>${base_endpoint}/rest/api/2/issue</rest_endpoint>
+        <rest_message display_value="Jira Issue">1f985612c3073000fb47df384aba8fa1</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2013-01-23 02:36:53</sys_created_on>
+        <sys_id>f3099612c3073000fb47df384aba8f3c</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>post</sys_name>
+        <sys_package display_value="IPLookup" source="x_17301_iplookup">db5e46f5db022300c6315608689619bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPLookup">db5e46f5db022300c6315608689619bb</sys_scope>
+        <sys_update_name>sys_rest_message_fn_f3099612c3073000fb47df384aba8f3c</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2013-02-15 19:45:45</sys_updated_on>
+        <use_basic_auth>true</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

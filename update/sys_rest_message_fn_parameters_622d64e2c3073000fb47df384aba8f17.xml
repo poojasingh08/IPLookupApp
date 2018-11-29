@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>issuebody</name>
+        <rest_message_function display_value="post">f3099612c3073000fb47df384aba8f3c</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2013-01-23 13:24:03</sys_created_on>
+        <sys_id>622d64e2c3073000fb47df384aba8f17</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>issuebody</sys_name>
+        <sys_package display_value="IPLookup" source="x_17301_iplookup">db5e46f5db022300c6315608689619bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPLookup">db5e46f5db022300c6315608689619bb</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_622d64e2c3073000fb47df384aba8f17</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2013-01-23 13:58:00</sys_updated_on>
+        <type>xml</type>
+        <value>{"fields":{"customfield_10010":"JAFHASFHSDJFHSDFJ","description":"This is my own description on this.","issuetype":{"name":"Bug"},"project":{"key":"TST"},"summary":"REST2 My Test Message Here"}}</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

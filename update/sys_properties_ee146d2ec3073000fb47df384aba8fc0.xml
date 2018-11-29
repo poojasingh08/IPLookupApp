@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>&lt;b&gt;Jira API Username&lt;/b&gt;&lt;br/&gt;&#13;
+The username provided by Jira.  This is not the email address username that is used for your Atlassian ID, but rather the service account username.&#13;
+&lt;i&gt;eg. demoUser&lt;/i&gt;</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>com.snc.integration.jira.jira_api_user</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2013-01-23 17:25:25</sys_created_on>
+        <sys_id>ee146d2ec3073000fb47df384aba8fc0</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>com.snc.integration.jira.jira_api_user</sys_name>
+        <sys_package display_value="IPLookup" source="x_17301_iplookup">db5e46f5db022300c6315608689619bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPLookup">db5e46f5db022300c6315608689619bb</sys_scope>
+        <sys_update_name>sys_properties_ee146d2ec3073000fb47df384aba8fc0</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2013-02-15 19:45:45</sys_updated_on>
+        <type>string</type>
+        <value>demoUser</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=ee146d2ec3073000fb47df384aba8fc0"/>
+</record_update>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="IPAddressInfo" max_length="40" name="x_17301_iplookup_ipaddressinfo" type="collection">
+        <element label="City" max_length="50" name="city" read_only="true" type="string"/>
+        <element label="Country" max_length="50" name="country" read_only="true" type="string"/>
+        <element label="IP Address" max_length="50" name="ip_address" type="string"/>
+        <element label="Loc" max_length="100" name="loc" read_only="true" type="string"/>
+        <element label="Postal" max_length="50" name="postal" read_only="true" type="string"/>
+        <element label="Region" max_length="50" name="region" read_only="true" type="string"/>
+    </element>
+</database>

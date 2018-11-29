@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>&lt;b&gt;Jira Project Key&lt;/b&gt;&lt;br/&gt;&#13;
+Jira issues are associated with Projects within Jira.  Specify the key value for the product that will receive Incidents from ServiceNow&lt;br/&gt;&#13;
+&lt;i&gt;eg. TST&lt;/i&gt;</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>com.snc.integration.jira.project</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2013-01-23 13:04:23</sys_created_on>
+        <sys_id>768864a2c3073000fb47df384aba8f51</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>com.snc.integration.jira.project</sys_name>
+        <sys_package display_value="IPLookup" source="x_17301_iplookup">db5e46f5db022300c6315608689619bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPLookup">db5e46f5db022300c6315608689619bb</sys_scope>
+        <sys_update_name>sys_properties_768864a2c3073000fb47df384aba8f51</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2013-01-23 17:31:36</sys_updated_on>
+        <type>string</type>
+        <value>TST</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=768864a2c3073000fb47df384aba8f51"/>
+</record_update>

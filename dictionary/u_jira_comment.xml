@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Jira Comment" max_length="40" name="u_jira_comment" type="collection">
+        <element label="Comment" max_length="1000" name="u_comment" type="string"/>
+        <element label="Comment ID" max_length="40" name="u_comment_id" type="string"/>
+        <element label="Issue ID" max_length="40" name="u_issue_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Synchronized" max_length="40" name="u_synced" type="boolean"/>
+    </element>
+</database>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>issueKey</name>
+        <rest_message_function display_value="get">8bdfc92ac3073000fb47df384aba8f87</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin_SHARE</sys_created_by>
+        <sys_created_on>2013-01-24 23:54:42</sys_created_on>
+        <sys_id>c11704cbc30b3000fb47df384aba8fdf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>issueKey</sys_name>
+        <sys_package display_value="IPLookup" source="x_17301_iplookup">db5e46f5db022300c6315608689619bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPLookup">db5e46f5db022300c6315608689619bb</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_c11704cbc30b3000fb47df384aba8fdf</sys_update_name>
+        <sys_updated_by>admin_SHARE</sys_updated_by>
+        <sys_updated_on>2013-01-24 23:54:50</sys_updated_on>
+        <type>string</type>
+        <value>TST-49502</value>
+    </sys_rest_message_fn_parameters>
+</record_update>
